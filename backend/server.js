@@ -12,6 +12,13 @@ app.use(cors({
 })); // Enable CORS for frontend requests
 app.use(express.json()); // Parse incoming JSON requests
 
+res.cookie('your_cookie_name', token, {
+  httpOnly: true,
+  secure: process.env.NODE_ENV === 'production', // Use HTTPS in production
+  sameSite: 'None',
+});
+
+
 
 mongoose.connect('mongodb+srv://hack:utd@hackutd24.z0b9c.mongodb.net/')
   .then(() => console.log('Connected to MongoDB!'))
