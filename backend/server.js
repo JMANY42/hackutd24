@@ -7,7 +7,8 @@ const port = 4000;
 app.use(cors({
   origin: ['http://localhost:3000','https://hackutd24.vercel.app'],
   methods: ['GET', 'PATCH', 'POST', 'DELETE'],
-  credentials: true
+  credentials: true,
+  sameSite: 'None'
 })); // Enable CORS for frontend requests
 app.use(express.json()); // Parse incoming JSON requests
 
