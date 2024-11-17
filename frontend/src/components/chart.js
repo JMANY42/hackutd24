@@ -98,7 +98,7 @@ const Chart = ({ type, addData = {} }) => {
         const fetchData = async () => {
             try {
                 const response = await fetch(
-                    `http://localhost:4000/api/fuel-efficiency/category/${type}`
+                    `ttps://hackutd24.vercel.app/api/fuel-efficiency/category/${type}`
                 );
                 const result = await response.json();
                 setData(result.groupedData);
