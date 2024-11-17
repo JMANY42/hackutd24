@@ -75,7 +75,7 @@ const Upload = () => {
 
             try {
                 // Send the file to the backend
-                const response = await fetch("hackutd24.vercel.app/upload", {
+                const response = await fetch("https://hackutd24.vercel.app/upload", {
                     method: "POST",
                     body: formData,
                 });
